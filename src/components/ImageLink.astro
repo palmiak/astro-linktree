@@ -1,0 +1,8 @@
+---
+const { data } = Astro.props;
+---
+
+<a href="{data.link}" target="_blank">
+    <img src={data.image} alt={data.title}>
+    {data.title}
+</a>

@@ -1,0 +1,9 @@
+---
+const { data } = Astro.props;
+import { Icon } from 'astro-icon/components'
+---
+
+<a href="{data.link}" target="_blank">
+    <Icon name={"mdi:" + data.icon} />
+    { data.title }
+</a>

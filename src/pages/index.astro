@@ -1,5 +1,14 @@
 ---
+import { getEntry } from 'astro:content';
+import { Icon } from 'astro-icon/components'
+import FeaturedLink from '../components/FeaturedLink.astro';
+import IconLink from '../components/IconLink.astro';
+import ImageLink from '../components/ImageLink.astro';
+import DefaultLink from '../components/DefaultLink.astro';
+import Title from '../components/Title.astro';
+import '../css/default.css';
 
+const profile = await getEntry('profile', 'palmiak');
 ---
 
 <html lang="en">
@@ -11,6 +20,44 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div class="container">
+			<div class="userInfo">
+				<img src={profile.data.avatar} alt="avatar" />
+				<h1>{profile.data.name}</h1>
+				<p>{profile.data.description}</p>
+			</div>
+
+			<ul class="socialMedia">
+				{profile.data.socialMedia.map((socialLink) => (
+					<li>
+						<a href={socialLink.link} target="blank">
+							<Icon name={"mdi:" + socialLink.type} />
+						</a>
+					</li>
+					))}
+			</ul>
+
+			<div class="links">
+				{profile.data.sections.map((section) => (
+					<div class={'section section-' + section.layout }>
+						{section.layout === 'featured' && (
+							<FeaturedLink data={section} />
+						)}
+						{section.layout === 'icon' && (
+							<IconLink data={section} />
+						)}
+						{section.layout === 'image' && (
+							<ImageLink data={section} />
+						)}
+						{section.layout === 'default' && (
+							<DefaultLink data={section} />
+						)}
+						{section.layout === 'title' && (
+							<Title data={section} />
+						)}
+					</div>
+				))}
+			</div>
+		</div>
 	</body>
 </html>
