@@ -1,5 +1,5 @@
 ---
-avatar: 'https://avatars.githubusercontent.com/u/12575252?v=4'
+avatar: 'https://picsum.photos/id/64/200/200'
 name: 'Maciek Palmowski'
 description: "🌟 Creative soul sharing inspiration & ideas! Let's connect! ✨"
 
@@ -10,34 +10,37 @@ socialMedia:
     - 
         type : twitter
         link : "https://link.pl"
+    -
+        type : instagram
+        link : "https://instagram.com"
 
 sections:
     -
         layout : image
-        image : "https://picsum.photos/200/300"
-        title : "jakiś link"
-        link : 'https://onet.pl'
+        image : "https://picsum.photos/200/200"
+        title : "A test link with an image"
+        link : 'https://maciekpalmowsk.dev'
 
     -
         layout : icon
         icon : account-sync
-        title : "jakiś link 2"
-        link : "https://onet.pl"
+        title : "A link with an icon"
+        link : "https://maciekpalmowsk.dev"
 
     -
         layout : featured
         imageType : image
-        image : "https://picsum.photos/200/300"
-        title : "jakiś link 3"
-        link : "https://onet.pl"
+        image : "https://picsum.photos/400/400"
+        title : "A featured image with a text"
+        link : "https://maciekpalmowsk.dev"
 
     -
         layout : title
-        title : "jakiś link 3"
+        title : "Just a title"
 
     -
         layout : default
-        title : "jakiś link 3"
-        link : "https://onet.pl"
+        title : "A default link"
+        link : "https://maciekpalmowsk.dev"
 
 ---

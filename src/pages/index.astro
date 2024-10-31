@@ -6,7 +6,9 @@ import IconLink from '../components/IconLink.astro';
 import ImageLink from '../components/ImageLink.astro';
 import DefaultLink from '../components/DefaultLink.astro';
 import Title from '../components/Title.astro';
-import '../css/default.css';
+const cssPath = '/src/css/default.css';
+
+const css = await import(/* @vite-ignore */cssPath); 
 
 const profile = await getEntry('profile', 'palmiak');
 ---
@@ -17,6 +19,7 @@ const profile = await getEntry('profile', 'palmiak');
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<style is:inline set:html={css.default} />
 		<title>Astro</title>
 	</head>
 	<body>
