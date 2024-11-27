@@ -20,25 +20,17 @@ const profile = await getEntry('profile', 'palmiak');
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<style is:inline set:html={css.default} />
-		<title>Astro</title>
+		<title>Astro Linktree</title>
 	</head>
 	<body>
 		<div class="container">
-			<div class="userInfo">
+			<div class="user-info">
 				<img src={profile.data.avatar} alt="avatar" />
-				<h1>{profile.data.name}</h1>
-				<p>{profile.data.description}</p>
+				<div>
+					<h1>{profile.data.name}</h1>
+					<p>{profile.data.description}</p>
+				</div>
 			</div>
-
-			<ul class="socialMedia">
-				{profile.data.socialMedia.map((socialLink) => (
-					<li>
-						<a href={socialLink.link} target="blank">
-							<Icon name={"mdi:" + socialLink.type} />
-						</a>
-					</li>
-					))}
-			</ul>
 
 			<div class="links">
 				{profile.data.sections.map((section) => (
@@ -61,6 +53,16 @@ const profile = await getEntry('profile', 'palmiak');
 					</div>
 				))}
 			</div>
+
+			<ul class="social-media">
+				{profile.data.socialMedia.map((socialLink) => (
+					<li>
+						<a href={socialLink.link} target="blank">
+							<Icon name={"mdi:" + socialLink.type} />
+						</a>
+					</li>
+					))}
+			</ul>
 		</div>
 	</body>
 </html>

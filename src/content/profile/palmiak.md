@@ -1,7 +1,7 @@
 ---
-avatar: 'https://picsum.photos/id/64/200/200'
+avatar: 'https://images.unsplash.com/photo-1520423465871-0866049020b7?w=200&h=200&auto=format&fit=crop'
 name: 'Maciek Palmowski'
-description: "🌟 Creative soul sharing inspiration & ideas! Let's connect! ✨"
+description: "Creative soul sharing inspiration & ideas! Let's connect!"
 
 socialMedia:
     - 
