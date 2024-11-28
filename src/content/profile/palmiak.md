@@ -1,5 +1,5 @@
 ---
-avatar: 'https://images.unsplash.com/photo-1520423465871-0866049020b7?w=200&h=200&auto=format&fit=crop'
+avatar: 'https://images.unsplash.com/photo-1520423465871-0866049020b7?w=600&h=600&auto=format&fit=crop'
 name: 'Maciek Palmowski'
 description: "Creative soul sharing inspiration & ideas! Let's connect!"
 

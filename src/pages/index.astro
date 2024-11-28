@@ -25,7 +25,7 @@ const profile = await getEntry('profile', 'palmiak');
 	<body>
 		<div class="container">
 			<div class="user-info">
-				<img src={profile.data.avatar} alt="avatar" />
+				<div class="photo"><img src={profile.data.avatar} alt="photo" /></div>
 				<div>
 					<h1>{profile.data.name}</h1>
 					<p>{profile.data.description}</p>
